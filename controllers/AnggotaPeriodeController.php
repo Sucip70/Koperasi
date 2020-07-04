@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Periode;
-use app\models\PeriodeSearch;
+use app\models\AnggotaPeriode;
+use app\models\AnggotaPeriodeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * PeriodeController implements the CRUD actions for Periode model.
+ * AnggotaPeriodeController implements the CRUD actions for AnggotaPeriode model.
  */
-class PeriodeController extends Controller
+class AnggotaPeriodeController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,12 +30,12 @@ class PeriodeController extends Controller
     }
 
     /**
-     * Lists all Periode models.
+     * Lists all AnggotaPeriode models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new PeriodeSearch();
+        $searchModel = new AnggotaPeriodeSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class PeriodeController extends Controller
     }
 
     /**
-     * Displays a single Periode model.
+     * Displays a single AnggotaPeriode model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,16 +58,16 @@ class PeriodeController extends Controller
     }
 
     /**
-     * Creates a new Periode model.
+     * Creates a new AnggotaPeriode model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Periode();
+        $model = new AnggotaPeriode();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_periode]);
+            return $this->redirect(['view', 'id' => $model->id_anggota]);
         }
 
         return $this->render('create', [
@@ -76,7 +76,7 @@ class PeriodeController extends Controller
     }
 
     /**
-     * Updates an existing Periode model.
+     * Updates an existing AnggotaPeriode model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -87,7 +87,7 @@ class PeriodeController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_periode]);
+            return $this->redirect(['view', 'id' => $model->id_anggota]);
         }
 
         return $this->render('update', [
@@ -96,7 +96,7 @@ class PeriodeController extends Controller
     }
 
     /**
-     * Deletes an existing Periode model.
+     * Deletes an existing AnggotaPeriode model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -110,15 +110,15 @@ class PeriodeController extends Controller
     }
 
     /**
-     * Finds the Periode model based on its primary key value.
+     * Finds the AnggotaPeriode model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Periode the loaded model
+     * @return AnggotaPeriode the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Periode::findOne($id)) !== null) {
+        if (($model = AnggotaPeriode::findOne($id)) !== null) {
             return $model;
         }
 
