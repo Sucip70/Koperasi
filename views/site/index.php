@@ -3,15 +3,20 @@
 /* @var $this yii\web\View */ 
 
 $this->title = 'My Yii Application';
+$self_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$member_link = "$self_link?r=koperasi%2Findex";
+$period_link = "$self_link?r=periode%2Findex";
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Koperasi</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href=<?= $member_link?>>Daftar Anggota</a></p>
+        
+        <p><a class="btn btn-lg btn-success" href=<?= $period_link?>>Daftar Periode</a></p>
     </div>
 
     <div class="body-content">

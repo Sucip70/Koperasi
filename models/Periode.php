@@ -29,10 +29,10 @@ class Periode extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_periode', 'periode', 'keterangan'], 'required'],
+            [['periode', 'keterangan'], 'required'],
             [['id_periode', 'periode'], 'integer'],
             [['keterangan'], 'string', 'max' => 255],
-            [['id_periode'], 'unique'],
+            [['id_periode', 'periode'], 'unique'],
         ];
     }
 
