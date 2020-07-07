@@ -22,8 +22,10 @@ body {
 }
 
 .jumbotron {
+    position: center;
+    color: white;
     text-align: center;
-    background-color: transparent;
+    padding: 100px 10px;
 }
 
 .jumbotron .btn {
