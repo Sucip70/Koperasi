@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\AnggotaPeriode */
 
-$this->title = 'Create Anggota Periode';
-$this->params['breadcrumbs'][] = ['label' => 'Anggota Periodes', 'url' => ['index']];
+$this->title = 'Tambah Anggota';
+$this->params['breadcrumbs'][] = ['label' => 'Anggota Koperasi', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="anggota-periode-create">

@@ -4,7 +4,7 @@
 
 $this->title = 'Koperasi UNS';
 $self_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$member_link = "$self_link?r=koperasi%2Findex";
+$member_link = "$self_link?r=anggota-periode%2Findex";
 $period_link = "$self_link?r=periode%2Findex";
 ?>
 <div class="site-index">
